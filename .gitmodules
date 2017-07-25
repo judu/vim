@@ -1,0 +1,51 @@
+[submodule "pack/judu/start/emmet-vim"]
+	path = pack/judu/start/emmet-vim
+	url = git://github.com/mattn/emmet-vim
+[submodule "pack/judu/start/vim-colors-solarized"]
+	path = pack/judu/start/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized
+[submodule "pack/judu/start/tabular"]
+	path = pack/judu/start/tabular
+	url = git://github.com/godlygeek/tabular
+[submodule "pack/judu/start/matchit"]
+	path = pack/judu/start/matchit
+	url = git://github.com/benjifisher/matchit.zip
+[submodule "pack/judu/start/gnupg.vim"]
+	path = pack/judu/start/gnupg.vim
+	url = git://github.com/vim-scripts/gnupg.vim
+[submodule "pack/judu/start/vim-airline"]
+	path = pack/judu/start/vim-airline
+	url = git://github.com/vim-airline/vim-airline
+[submodule "pack/judu/start/vim-airline-themes"]
+	path = pack/judu/start/vim-airline-themes
+	url = git://github.com/vim-airline/vim-airline-themes
+[submodule "pack/judu/start/vim-fugitive"]
+	path = pack/judu/start/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive
+[submodule "pack/judu/start/vim-local-vimrc"]
+	path = pack/judu/start/vim-local-vimrc
+	url = git://github.com/MarcWeber/vim-addon-local-vimrc
+[submodule "pack/judu/start/syntastic"]
+	path = pack/judu/start/syntastic
+	url = git://github.com/scrooloose/syntastic
+[submodule "pack/judu/start/play2-vim"]
+	path = pack/judu/start/play2-vim
+	url = git://github.com/gre/play2vim
+[submodule "pack/judu/start/rust.vim"]
+	path = pack/judu/start/rust.vim
+	url = git://github.com/wting/rust.vim
+[submodule "pack/judu/start/vim-scala"]
+	path = pack/judu/start/vim-scala
+	url = git://github.com/derekwyatt/vim-scala
+[submodule "pack/judu/start/vim-css3-syntax"]
+	path = pack/judu/start/vim-css3-syntax
+	url = git://github.com/hail2u/vim-css3-syntax
+[submodule "pack/judu/start/vim-go"]
+	path = pack/judu/start/vim-go
+	url = git://github.com/fatih/vim-go
+[submodule "pack/judu/start/vim-autoformat"]
+	path = pack/judu/start/vim-autoformat
+	url = git://github.com/Chiel92/vim-autoformat
+[submodule "pack/judu/start/ctrlp.vim"]
+	path = pack/judu/start/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim
