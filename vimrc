@@ -1,12 +1,19 @@
 set nocompatible
 
+" Set the indentation right
+set sw=3 ts=3 sts=0 expandtab
+" set the right margin to 80 characters
+set tw=90
+
+let g:rust_recommended_style = 1
+
 let g:local_vimrc = {'names':['.lvimrc'],'hash_fun':'LVRHashOfFile'}
 
 set ofu=syntaxcomplete#Complete
 set completeopt=longest,menuone
 
 syntax on
-filetype on
+filetype plugin indent on
 set hidden
 set lazyredraw
 set showmode
@@ -17,7 +24,6 @@ set incsearch
 set autoread
 set hlsearch
 set ignorecase
-
 
 
 " Command-T plugin ignore files.
@@ -199,10 +205,6 @@ let g:Tex_MultipleCompileFormats='pdf,dvi'
 "		\ endif
 "augroup END
 
-" Set the indentation right
-set sw=3 ts=3 sts=0 expandtab
-" set the right margin to 80 characters
-set tw=90
 
 " solarized stuff
 let g:solarized_contrast='high'
@@ -244,7 +246,7 @@ noremap <F5> :Autoformat<CR>
 let g:formatdef_scalafmt = "'scalafmt'"
 let g:formatters_scala = ['scalafmt']
 
-
+autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=99 expandtab
 
 " Use Hdevtools with haskell files.
 " autocmd FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>

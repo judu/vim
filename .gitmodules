@@ -49,3 +49,9 @@
 [submodule "pack/judu/start/ctrlp.vim"]
 	path = pack/judu/start/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim
+[submodule "pack/judu/start/vim-toml"]
+	path = pack/judu/start/vim-toml
+	url = git://github.com/cespare/vim-toml.git
+[submodule "pack/judu/start/html5.vim"]
+	path = pack/judu/start/html5.vim
+	url = git://github.com/othree/html5.vim.git
