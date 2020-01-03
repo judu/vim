@@ -31,9 +31,6 @@
 [submodule "pack/judu/start/play2-vim"]
 	path = pack/judu/start/play2-vim
 	url = git://github.com/gre/play2vim
-[submodule "pack/judu/start/rust.vim"]
-	path = pack/judu/start/rust.vim
-	url = git://github.com/wting/rust.vim
 [submodule "pack/judu/start/vim-scala"]
 	path = pack/judu/start/vim-scala
 	url = git://github.com/derekwyatt/vim-scala
