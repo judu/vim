@@ -58,3 +58,36 @@
 [submodule "pack/judu/start/php.vim"]
 	path = pack/judu/start/php.vim
 	url = https://github.com/captbaritone/better-indent-support-for-php-with-html.git
+[submodule "pack/judu/start/latex-suite"]
+	path = pack/judu/start/latex-suite
+	url = https://github.com/vim-latex/vim-latex.git
+[submodule "pack/judu/start/vim-varnish"]
+	path = pack/judu/start/vim-varnish
+	url = https://github.com/empanda/vim-varnish.git
+[submodule "pack/judu/start/vim-transpose"]
+	path = pack/judu/start/vim-transpose
+	url = https://github.com/salsifis/vim-transpose.git
+[submodule "pack/judu/start/asyncomplete.vim"]
+	path = pack/judu/start/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim
+[submodule "pack/judu/start/async.vim"]
+	path = pack/judu/start/async.vim
+	url = https://github.com/prabirshrestha/async.vim
+[submodule "pack/judu/start/vim-lsp"]
+	path = pack/judu/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp
+[submodule "pack/judu/start/asyncomplete-lsp.vim"]
+	path = pack/judu/start/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim
+[submodule "pack/judu/start/vim-es6"]
+	path = pack/judu/start/vim-es6
+	url = https://github.com/isRuslan/vim-es6.git
+[submodule "pack/judu/start/vim-fish"]
+	path = pack/judu/start/vim-fish
+	url = https://github.com/dag/vim-fish.git
+[submodule "pack/judu/start/limelight.vim"]
+	path = pack/judu/start/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "pack/judu/start/goyo.vim"]
+	path = pack/judu/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git

@@ -23,7 +23,7 @@ set noswapfile
 set incsearch
 set autoread
 set hlsearch
-set ignorecase
+"set ignorecase
 
 
 " Command-T plugin ignore files.
@@ -36,7 +36,7 @@ let g:solarized_termcolors=256      " use solarized 256 fallback
 
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
-set background=dark
+set background=light
 
 "let g:molokai_original = 1
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -47,7 +47,13 @@ set grepprg=grep\ -nH\ $*
 
 source ~/.vim/vimrc.bepo
 
+nmap <silent> ,r<space> :%s/\s\+$//g<CR>
+nmap <silent> ,db :set background=dark<CR>
+nmap <silent> ,lb :set background=light<CR>
+
 nmap <silent> ,tc :set invignorecase<CR>:set ignorecase?<CR>
+
+nmap <silent> ,sr :call setline('.', join(sort(split(getline('.'), ' ')), " "))<cr>
 
 " Let's make it easy to edit this file (mnemonic for the key sequence is
 " 'e'dit 'v'imrc)
@@ -181,6 +187,17 @@ set timeoutlen=500
 " These commands open folds
 set foldopen=block,jump,mark,percent,quickfix,search,tag,undo
 
+set foldmethod=indent
+set foldlevelstart=1
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
 " Syntax coloring lines that are too long just slows down the world
 set synmaxcol=2048
 " Keep some stuff in the history
@@ -220,9 +237,6 @@ let g:vim_markdown_folding_level = 2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='solarized'
 
-highlight UnbreakableSpaces ctermbg=237 guibg=orange
-match UnbreakableSpaces / /
-
 " Disable syntastic for java.
 let g:syntastic_java_checkers = []
 let g:syntastic_haskell_checkers = []
@@ -246,6 +260,9 @@ noremap <F5> :Autoformat<CR>
 let g:formatdef_scalafmt = "'scalafmt'"
 let g:formatters_scala = ['scalafmt']
 
+"limelight
+let g:limelight_conceal_ctermfg = 'gray'
+
 autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=99 expandtab
 
 " Use Hdevtools with haskell files.
@@ -255,8 +272,27 @@ autocmd FileType rust setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=99
 " special stuff for markdown.
 autocmd FileType mkd setlocal expandtab setlocal tabstop=3 setlocal sw=3 setlocal tw=90
 
-highlight RedundantSpaces ctermbg=234 guibg=red
-match RedundantSpaces /\s\+$/
+highlight NonsecableSpaces ctermbg=172 guibg=orange
+highlight RedundantSpaces ctermbg=18 guibg=darkblue
+
+call matchadd('NonsecableSpaces', '[  ]')
+call matchadd('RedundantSpaces', '\s\+$')
+
+
+" vim-lsp
+au User lsp_setup call lsp#register_server({ 'name': 'rls', 'cmd': {server_info->['rls']}, 'whitelist': ['rust'] })
+
+" asyncomplete
+let g:asyncomplete_remove_duplicates = 1
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 " highlight LeadingSpaces ctermbg=234 guibg=red
 " match LeadingSpaces /^\s\+/
+
+autocmd FileType fish compiler fish
+
+if &shell =~# 'fish$'
+   set shell=bash
+endif
