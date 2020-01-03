@@ -88,3 +88,6 @@
 [submodule "pack/judu/start/goyo.vim"]
 	path = pack/judu/start/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "pack/judu/start/rust.vim"]
+	path = pack/judu/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
