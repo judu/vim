@@ -91,3 +91,12 @@
 [submodule "pack/judu/start/rust.vim"]
 	path = pack/judu/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim
+[submodule "pack/judu/start/vim-avro"]
+	path = pack/judu/start/vim-avro
+	url = github:gurpreetatwal/vim-avro
+[submodule "pack/judu/start/vim-vue"]
+	path = pack/judu/start/vim-vue
+	url = https://github.com/posva/vim-vue.git
+[submodule "pack/judu/start/gruvbox"]
+	path = pack/judu/start/gruvbox
+	url = github:morhetz/gruvbox.git
