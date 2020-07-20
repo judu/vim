@@ -44,6 +44,7 @@ set background=light
 " program to always generate a file-name.
 set grepprg=grep\ -nH\ $*
 
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 source ~/.vim/vimrc.bepo
 
@@ -188,7 +189,7 @@ set timeoutlen=500
 set foldopen=block,jump,mark,percent,quickfix,search,tag,undo
 
 set foldmethod=indent
-set foldlevelstart=1
+set foldlevelstart=2
 let javaScript_fold=1         " JavaScript
 let perl_fold=1               " Perl
 let php_folding=1             " PHP
@@ -240,6 +241,7 @@ let g:airline_theme='solarized'
 " Disable syntastic for java.
 let g:syntastic_java_checkers = []
 let g:syntastic_haskell_checkers = []
+let g:syntastic_rust_checkers = ['rustc']
 
 autocmd FileType play2-routes setlocal tw=0
 
@@ -280,7 +282,7 @@ call matchadd('RedundantSpaces', '\s\+$')
 
 
 " vim-lsp
-au User lsp_setup call lsp#register_server({ 'name': 'rls', 'cmd': {server_info->['rls']}, 'whitelist': ['rust'] })
+"au User lsp_setup call lsp#register_server({ 'name': 'rls', 'cmd': {server_info->['rls']}, 'blacklist': ['rust'] })
 
 " asyncomplete
 let g:asyncomplete_remove_duplicates = 1
