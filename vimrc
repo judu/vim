@@ -1,6 +1,7 @@
+" Because I don't need old vi compat.
 set nocompatible
 
-" Set the indentation right
+" Set the indentation right 😈
 set sw=3 ts=3 sts=0 expandtab
 " set the right margin to 80 characters
 set tw=90
@@ -50,6 +51,8 @@ source ~/.vim/vimrc.bepo
 
 nmap <silent> ,r<space> :%s/\s\+$//g<CR>
 nmap <silent> ,db :set background=dark<CR>
+nmap <silent> ,nm :colorscheme solarized8_high<CR>
+nmap <silent> ,dm :colorscheme solarized8_flat<CR>
 nmap <silent> ,lb :set background=light<CR>
 
 nmap <silent> ,tc :set invignorecase<CR>:set ignorecase?<CR>
@@ -237,7 +240,7 @@ let g:solarized_contrast='high'
 let g:solarized_termtrans=0
 let g:solarized_visibility='high'
 let g:tender_termtrans=1
-colorscheme solarized8_high
+colorscheme solarized8_flat
 "colorscheme gruvbox
 "colorscheme one
 "colorscheme tender
