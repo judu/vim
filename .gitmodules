@@ -1,9 +1,6 @@
 [submodule "pack/judu/start/emmet-vim"]
 	path = pack/judu/start/emmet-vim
 	url = git://github.com/mattn/emmet-vim
-[submodule "pack/judu/start/vim-colors-solarized"]
-	path = pack/judu/start/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized
 [submodule "pack/judu/start/tabular"]
 	path = pack/judu/start/tabular
 	url = git://github.com/godlygeek/tabular
@@ -97,6 +94,21 @@
 [submodule "pack/judu/start/vim-vue"]
 	path = pack/judu/start/vim-vue
 	url = https://github.com/posva/vim-vue.git
-[submodule "pack/judu/start/gruvbox"]
-	path = pack/judu/start/gruvbox
+[submodule "pack/colorschemes/start/gruvbox"]
+	path = pack/colorschemes/start/gruvbox
 	url = github:morhetz/gruvbox.git
+[submodule "pack/colorschemes/start/one"]
+	path = pack/colorschemes/start/one
+	url = github:rakr/vim-one.git
+[submodule "pack/colorschemes/start/atom-dark"]
+	path = pack/colorschemes/start/atom-dark
+	url = github:gosukiwi/vim-atom-dark.git
+[submodule "pack/colorschemes/start/tender"]
+	path = pack/colorschemes/start/tender
+	url = github:jacoborus/tender.vim.git
+[submodule "pack/colorschemes/start/vim-solarized8"]
+	path = pack/colorschemes/start/vim-solarized8
+	url = github:lifepillar/vim-solarized8.git
+[submodule "pack/colorschemes/start/badwolf"]
+	path = pack/colorschemes/start/badwolf
+	url = github:sjl/badwolf.git

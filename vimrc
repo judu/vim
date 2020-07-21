@@ -25,18 +25,18 @@ set autoread
 set hlsearch
 "set ignorecase
 
+" Fix truecolor on tmux
+set termguicolors
+let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+" ^ See `:h xterm-true-color` for more info.
+" 👇 is for italics in tmux
+set t_ZH=[3m
+set t_ZR=[23m
+" ☝  see :h t_ZH
 
 " Command-T plugin ignore files.
 set wildignore+=*.class,target,node_modules,bower_components
-
-" Color scheme
-set t_Co=256
-let g:solarized_termcolors=256      " use solarized 256 fallback
-
-
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
-set background=light
 
 "let g:molokai_original = 1
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -223,20 +223,47 @@ let g:Tex_MultipleCompileFormats='pdf,dvi'
 "		\ endif
 "augroup END
 
+" If using a dark background within the editing area and syntax highlighting
+" turn on this option as well
+set background=dark
 
-" solarized stuff
+" colorschemes configuration
+let g:badwolf_darkgutter = 1
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='hard'
+let g:gruvbox_italic=1
+let g:one_allow_italics = 1
 let g:solarized_contrast='high'
-let g:solarized_termtrans=1
-colorscheme solarized
-
+let g:solarized_termtrans=0
+let g:solarized_visibility='high'
+let g:tender_termtrans=1
+colorscheme solarized8_high
+"colorscheme gruvbox
+"colorscheme one
+"colorscheme tender
+"colorscheme atom-dark
+"colorscheme badwolf
+let g:airline_theme='solarized_flood'
 
 " Vim markdown stuff
 let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_folding_level = 2
 
 " airline recommended default config
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='solarized'
+" airline symbols
+if !exists('g:airline_symbols')
+   let g:airline_symbols = {}
+endif
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = '☰ '
+let g:airline_symbols.maxlinenr = ' '
+let g:airline_symbols.branch = ''
 
 " Disable syntastic for java.
 let g:syntastic_java_checkers = []
